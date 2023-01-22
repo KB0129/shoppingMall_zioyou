@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en" class="pink-theme">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Maxartkiller">
+
+    <title>Register · GoFruit</title>
+
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='vendor/materializeicon/material-icons.css')}}">
+
+    <!-- Roboto fonts CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='vendor/bootstrap-4.3.1/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link href="{{url_for('static', filename='vendor/swiper/css/swiper.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <div class="row no-gutters vh-100 loader-screen">
+        <div class="col align-self-center text-white text-center">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            <h1><span class="font-weight-light">Go</span>Fruit</h1>
+            <div class="laoderhorizontal"><div></div><div></div><div></div><div></div></div>
+        </div>
+    </div>
+    <div class="row no-gutters vh-100 proh bg-template">
+        <img src="{{url_for('static', filename='img/apple.png')}}" alt="logo" class="apple right-image align-self-center">
+        <div class="col align-self-center px-3  text-center">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo" class="logo-small">
+            <h2 class="text-white"><span class="font-weight-light">Sign</span>In</h2>
+            <form action="/signup" method="POST" class="form-signin shadow">
+                 <div class="form-group float-label active">
+                    <input type="text" id="name" name="user_name" class="form-control" required autofocus >
+                    <label class="form-control-label">Name</label>
+                </div>
+                
+                <div class="form-group float-label active">
+                    <input type="email" id="email" name="user_email" class="form-control" required>
+                    <label for="email" class="form-control-label">Email address</label>
+                </div>
+
+                <div class="form-group float-label">
+                    <input type="password" id="password" name="user_password" class="form-control" required>
+                    <label for="password" class="form-control-label">Password</label>
+                </div>
+
+                <div class="form-group my-4 text-left">
+                    <div class="custom-control custom-checkbox">
+                        <input type="checkbox" class="custom-control-input" id="rememberme">
+                        <label class="custom-control-label" for="rememberme">I accept <a href="#">Terms and Condition</a></label>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-auto">
+                        <input href="login" type="submit" value ="Sign UP" class="btn btn-lg btn-default btn-rounded shadow"> <i class="material-icons"></i></input>
+                    </div>
+                </div>
+            </form>
+            <p class="text-center text-white">
+                Already have account?<br>
+                <a href="login">Sign In</a>
+            </p>
+        </div>
+    </div>
+
+    <!-- jquery, popper and bootstrap js -->
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap-4.3.1/js/bootstrap.min.js')}}"></script>
+
+    <!-- swiper js -->
+    <script src="{{url_for('static', filename='vendor/swiper/js/swiper.min.js')}}"></script>
+
+    <!-- template custom js -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en" class="pink-theme">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, viewport-fit=cover, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="Maxartkiller">
+
+    <title>Product · GoFruit</title>
+
+    <!-- Material design icons CSS -->
+    <link rel="stylesheet" href="{{url_for('static', filename='vendor/materializeicon/material-icons.css')}}">
+
+    <!-- Roboto fonts CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="{{url_for('static', filename='vendor/bootstrap-4.3.1/css/bootstrap.min.css')}}" rel="stylesheet">
+
+    <!-- Swiper CSS -->
+    <link href="{{url_for('static', filename='vendor/swiper/css/swiper.min.css')}}" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{{url_for('static', filename='css/style.css')}}" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Loader -->
+    <div class="row no-gutters vh-100 loader-screen">
+        <div class="col align-self-center text-white text-center">
+            <img src="{{url_for('static', filename='img/logo.png')}}" alt="logo">
+            <h1><span class="font-weight-light">Go</span>Fruit</h1>
+            <div class="laoderhorizontal">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+    <!-- Loader ends -->
+
+    <div class="wrapper">
+
+        <!-- header -->
+        <div class="header">
+            <div class="row no-gutters">
+                <div class="col-auto">
+                    <a href="controls" class="btn  btn-link text-dark"><i class="material-icons">navigate_before</i></a>
+                </div>
+                <div class="col text-center"><img src="{{url_for('static', filename='img/logo-header.png')}}" alt="" class="header-logo"></div>
+                <div class="col-auto">
+                    <a href="profile" class="btn  btn-link text-dark"><i class="material-icons">account_circle</i></a>
+                </div>
+            </div>
+        </div>
+        <!-- header ends -->
+
+        <div class="container">
+            <!-- page content here -->
+            <div class="row mt-3">
+<!--                <div class="col-md-6">-->
+<!--                    <div class="form-group has-error  float-label">-->
+<!--                        <input id="form_name" type="text" name="product_id" class="form-control is-invalid" required="required" readonly>-->
+<!--                        <label class="form-control-label" for="form_name">ID *</label>-->
+<!--                        <div class="help-text">ID is required.</div>-->
+<!--                    </div>-->
+<!--                </div>-->
+                <div class="col-md-6">
+                    <div class="form-group float-label">
+                        <input id="form_lastname" type="text" name="product_name" class="form-control" required="required">
+                        <label class="form-control-label" for="form_lastname">Product name *</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="form-group float-label">
+                        <input id="form_email" type="text" name="product_price" class="form-control" required="required">
+                        <label class="form-control-label" for="form_email">Price *</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group float-label active">
+                        <select id="form_need" name="need" class="form-control" required="required">
+                            <option label="Select Category"></option>
+                            <option value="Request quotation">Add Product</option>
+                            <option value="Request order status">Update Product</option>
+                            <option value="Request copy of an invoice">Delete Product</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <label class="form-control-label" for="form_need">Please specify the action *</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form-group float-label">                        
+                        <textarea id="form_message" name="message" class="form-control" rows="4" required data-error="Please, leave us a message."></textarea>
+                        <label class="form-control-label" for="form_message">Message</label>
+                        <div class="help-block with-errors"></div>
+                    </div>
+                </div>
+                <div class="col-md-12 text-center mt-3">
+                    <button class="btn btn-default btn-rounded btn-lg shadow">ADD</button>
+                    <button class="btn btn-default btn-rounded btn-lg shadow">UPDATE</button>
+                    <button class="btn btn-default btn-rounded btn-lg shadow">DELETE</button>
+                </div>
+            </div>
+            <div class="row mt-4">
+                <div class="col-md-12">
+                    <p class="text-muted">
+                        <strong>*</strong> Product id is automatically allocated.
+                </div>
+            </div>
+
+
+            <!-- page content ends -->
+        </div>
+
+        <!-- footer -->
+        <div class="footer">
+            <div class="no-gutters">
+                <div class="col-auto mx-auto">
+                    <div class="row no-gutters justify-content-center">
+                        <div class="col-auto">
+                            <a href="index" class="btn btn-link-default active">
+                                <i class="material-icons">store_mall_directory</i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="statistics" class="btn btn-link-default">
+                                <i class="material-icons">insert_chart_outline</i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="cart" class="btn btn-default shadow centerbutton">
+                                <i class="material-icons">local_mall</i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="favorite-products" class="btn btn-link-default">
+                                <i class="material-icons">favorite</i>
+                            </a>
+                        </div>
+                        <div class="col-auto">
+                            <a href="profile" class="btn btn-link-default">
+                                <i class="material-icons">account_circle</i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- footer ends -->
+    </div>
+
+    <!-- jquery, popper and bootstrap js -->
+    <script src="{{url_for('static', filename='js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{url_for('static', filename='js/popper.min.js')}}"></script>
+    <script src="{{url_for('static', filename='vendor/bootstrap-4.3.1/js/bootstrap.min.js')}}"></script>
+
+    <!-- swiper js -->
+    <script src="{{url_for('static', filename='vendor/swiper/js/swiper.min.js')}}"></script>
+
+    <!-- template custom js -->
+    <script src="{{url_for('static', filename='js/main.js')}}"></script>
+
+    <!-- page level script -->
+    <script>
+        $(window).on('load', function() {
+
+        });
+
+    </script>
+
+</body>
+
+</html>
